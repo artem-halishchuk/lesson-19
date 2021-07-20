@@ -1,0 +1,115 @@
+.header-team {
+  .header__nav {
+    .header__list {
+      .header__list-item:nth-child(3) {
+        border-bottom-color: var(--color-accent);
+        color: var(--color-accent);
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+}
+.all-team-member {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 85px;
+  margin-bottom: 60px;
+  padding-right: 113px;
+  padding-left: 113px;
+  gap: 40px;
+  @media (max-width: 1440px) {
+    padding-right: 66px;
+    padding-left: 66px;
+  }
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    gap: 0;
+  }
+}
+.all-team-member__photo {
+  max-width: 413px;
+  border-radius: var(--border-radius);
+  @media (max-width: 1440px) {
+    max-width: 335px;
+  }
+}
+.all-team-member__description-wrapper {
+  .all-team-member__name {
+    @include heading;
+    margin-top: 20px;
+    @media (max-width: 1024px) {
+      @include font-h2;
+      font-weight: 700;
+    }
+    @media (max-width: 768px) {
+    }
+  }
+  .all-team-member__listing {
+    @include font-ul;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 13px;
+    color: var(--color-active-regular);
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      background-color: var(--color-switcher-background);
+    }
+    @media (max-width: 1440px) {
+      &:after {
+        margin-top: 8px;
+        margin-bottom: 20px;
+      }
+      flex-direction: column;
+      gap: 10px;
+    }
+    .all-team-member__item {
+      display: flex;
+      align-items: center;
+      &:first-child {
+        color: var(--color-text);
+      }
+      &:nth-child(1n + 2):before {
+        content: '';
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-right: 10px;
+        margin-left: 10px;
+        border-radius: 50%;
+        background-color: var(--color-switcher-background);
+        @media (max-width: 1440px) {
+          display: none;
+          gap: 10px;
+        }
+      }
+    }
+  }
+  .all-team-member__text {
+    @include font-articl;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  .all-team-member__heading {
+    @include font-h3caps;
+    margin-bottom: 10px;
+    color: var(--color-main-900);
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+}

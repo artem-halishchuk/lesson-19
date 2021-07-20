@@ -1,0 +1,267 @@
+.header-about {
+  .header__nav {
+    .header__list {
+      .header__list-item:nth-child(1) {
+        border-bottom-color: var(--color-accent);
+        color: var(--color-accent);
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+}
+.about-services-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-top: 80px;
+  margin-bottom: 100px;
+  padding-right: 112px;
+  padding-left: 112px;
+  & {
+    @media (max-width: 1024px) {
+      margin-bottom: 50px;
+      padding-right: 66px;
+      padding-left: 66px;
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 30px;
+      margin-bottom: 34px;
+      padding: 0;
+    }
+  }
+}
+.about-services {
+  display: flex;
+  flex-direction: column;
+  max-width: 641px;
+}
+.about-services__heading {
+  @include heading;
+  @media (max-width: 768px) {
+    @include font-h2;
+    font-weight: 700;
+  }
+}
+.about-services__description {
+  @include text;
+  margin-top: 20px;
+}
+.achievements {
+  width: 100%;
+  margin-left: 40px;
+  & {
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+}
+.achievements__list {
+  & {
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+}
+.achievements__item {
+  padding-bottom: 40px;
+  padding-left: 16px;
+  border-left: 4px solid var(--color-switcher-background);
+  & {
+    @media (max-width: 768px) {
+      padding-bottom: 20px;
+      padding-left: 0;
+      border: none;
+    }
+  }
+  &:last-child {
+    padding-bottom: 0;
+  }
+  .about-services__value-wrap {
+    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    //background-image: url('../../images/achievements/flag.svg');
+    background-position: left center;
+    background-size: 25px auto;
+    .about-services__value {
+      padding-left: 35px;
+      background-clip: text;
+      background-image: var(--gradient-red-text);
+      font-size: 3.6rem;
+      font-weight: 700;
+      line-height: calc(42 / 36);
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  &:nth-child(1) {
+    @media (max-width: 768px) {
+      padding-top: 15px;
+      border-top: 4px solid var(--color-switcher-background);
+    }
+    .about-services__value-wrap {
+      background-image: url('../images/achievements/flag.svg');
+    }
+  }
+  &:nth-child(2) {
+    .about-services__value-wrap {
+      background-image: url('../images/achievements/case.svg');
+    }
+  }
+  &:nth-child(3) {
+    .about-services__value-wrap {
+      background-image: url('../images/achievements/star.svg');
+    }
+  }
+}
+.achievements__description {
+  @include font-h4;
+  color: var(--color-main-900);
+}
+.team-foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  margin-right: auto;
+  margin-left: auto;
+  background-image: linear-gradient(264.71deg, #f01432 0%, #323264 29.69%),
+    url('../images/team-all.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 30%;
+  background-size: cover;
+  background-blend-mode: screen, normal;
+  & {
+    @media (max-width: 768px) {
+      height: 290px;
+    }
+  }
+  .team-foto__text {
+    opacity: 0.8;
+    color: #fff;
+    font-size: 9.6rem;
+    font-weight: 700;
+    letter-spacing: 63px;
+    line-height: calc(113 / 96);
+    text-align: center;
+    text-shadow: 0 15px 30px rgba(40, 40, 86, 0.8);
+    text-transform: uppercase;
+    & {
+      @media (max-width: 1024px) {
+        letter-spacing: 33px;
+      }
+      @media (max-width: 768px) {
+        font-size: 2rem;
+        font-weight: 700;
+        letter-spacing: 13px;
+        line-height: calc(42 / 20);
+      }
+    }
+  }
+}
+.about-quality {
+  display: flex;
+  margin-top: 80px;
+  padding-right: 112px;
+  padding-left: 112px;
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+    padding-right: 66px;
+    padding-left: 66px;
+  }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    margin-top: 20px;
+
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .about-services__heading {
+    order: 2;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+  .about-services__description-wrap {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    max-width: 641px;
+    margin-right: 40px;
+    gap: 20px;
+    @media (max-width: 768px) {
+      margin-right: 0;
+    }
+    .about-services__description {
+      margin-top: 0;
+    }
+  }
+}
+.awards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 93px;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  background-color: var(--color-content-background);
+  @media (max-width: 1024px) {
+    margin-top: 60px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 40px;
+  }
+  .awards__heading {
+    @include font-h3caps;
+    margin-top: 28px;
+  }
+  .awards__list {
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 40px;
+    @media (max-width: 1024px) {
+      gap: 20px;
+    }
+    .awards__item {
+      width: 100%;
+      height: 110px;
+      overflow: hidden;
+      border-radius: var(--border-radius);
+      background-color: var(--color-text-for-dark);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: auto 50%, 100%;
+      @media (max-width: 1024px) {
+        height: 90px;
+      }
+    }
+    .awards__item:nth-child(1) {
+      background-image: url('../images/awards/legal-500.jpg');
+    }
+    .awards__item:nth-child(2) {
+      background-image: url('../images/awards/award-year.jpg');
+    }
+    .awards__item:nth-child(3) {
+      background-image: url('../images/awards/market-leaders.jpg');
+    }
+    .awards__item:nth-child(4) {
+      background-image: url('../images/awards/ulf-2017.jpg');
+    }
+    @media (max-width: 768px) {
+      .awards__item:nth-last-child(-n + 2) {
+        display: none;
+      }
+    }
+  }
+  .listing {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+}
+.listing__item:nth-last-child(-n + 3) {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+  }
+}
