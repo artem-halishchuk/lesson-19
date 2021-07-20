@@ -71,12 +71,12 @@
       background-color: var(--color-switcher-background);
     }
     @media (max-width: 1440px) {
+      flex-direction: column;
+      gap: 10px;
       &:after {
         margin-top: 8px;
         margin-bottom: 20px;
       }
-      flex-direction: column;
-      gap: 10px;
     }
     .all-team-member__item {
       display: flex;

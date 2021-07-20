@@ -34,15 +34,12 @@
   }
 }
 .contacts__list-contact {
+  @include font-articl-big;
   display: flex;
   flex-direction: column;
   width: 412px;
   color: var(--color-main-900);
   font-weight: 400;
-  @media (max-width: 1440px) {
-    width: 312px;
-  }
-  @include font-articl-big;
   .contacts__item-contact:first-child {
     margin-bottom: 40px;
     &:after {
@@ -86,6 +83,9 @@
       line-height: calc(16 / 12);
       text-transform: uppercase;
     }
+  }
+  @media (max-width: 1440px) {
+    width: 312px;
   }
 }
 .form-contact {
@@ -134,9 +134,9 @@
         font-weight: 400;
         resize: none;
         &::placeholder {
+          @include font-articl;
           color: var(--color-text);
           font-family: 'TTNorms';
-          @include font-articl;
         }
         &:focus {
           border: 2px solid var(--color-accent);
