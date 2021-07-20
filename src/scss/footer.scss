@@ -1,0 +1,107 @@
+footer {
+  padding-top: 0;
+  padding-bottom: 40px;
+  background-color: var(--color-content-background);
+}
+.footer {
+  @include font-adres;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 28px;
+  border-top: 4px solid var(--color-switcher-background);
+  color: var(--color-text);
+  & {
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+.copyright {
+  & {
+    @media (max-width: 1024px) {
+      margin-top: 29px;
+      margin-bottom: 81px;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      margin-bottom: 118px;
+    }
+  }
+}
+.contacts__cicle-footer {
+  @include contacts-cicle;
+  background-color: var(--color-text);
+  & {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+.contacts__list-footer {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  align-items: center;
+  width: 400px;
+  height: 79px;
+  & {
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      width: 315px;
+      height: 100%;
+    }
+  }
+}
+.contacts__item-footer {
+  display: inline-flex;
+  align-items: center;
+  & {
+    @media (max-width: 768px) {
+      display: flex;
+      //width: 315px;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+  }
+}
+.contacts__item-footer:first-child {
+  @include font-adres;
+  color: var(--color-main-500);
+}
+.contacts__item-footer:nth-child(2) {
+  color: var(--color-active-regular);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  line-height: calc(14 / 12);
+  text-transform: uppercase;
+}
+.contacts__item-footer:nth-child(3) {
+  .contacts__link-footer {
+    img {
+      width: 38px;
+      height: auto;
+    }
+  }
+}
+.contacts__item-footer:nth-child(4) {
+  @include font-adres;
+  color: var(--color-main-500);
+  font-weight: 700;
+}
+.contacts__item-footer:last-child {
+  @include font-adres;
+  color: var(--color-active-regular);
+  font-weight: 700;
+}
+.footer-only {
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  .footer {
+    border-top: none;
+  }
+}

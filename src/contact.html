@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+
+<body>
+    <!-- START HEADER -->
+    <header class="header header-white header-contact container">
+        <div class="logo">
+            <a class="logo__link-main" href="index.html">
+                <h2 class="logo__headig">
+                    hlegals юридична компанія
+                </h2>
+            </a>
+            <div class="logo__caption">
+                <a class="logo__link" href="contact.html">контакти</a>
+            </div>
+        </div>
+        <div class="language-switcher">
+            <div class="lng">
+                <input type="radio" id="radio-lang-ua" name="language-site" value="ua" checked>
+                <label for="radio-lang-ua">ук</label>
+                <input type="radio" id="radio-lang-ru" name="language-site" value="ru">
+                <label for="radio-lang-ru">ру</label>
+                <input type="radio" id="radio-lang-en" name="language-site" value="en">
+                <label for="radio-lang-en">en</label>
+            </div>
+        </div>
+        <address class="contacts-header">
+            <ul class="contacts-header__list">
+                <li class="contacts-header__item">
+                    <div class="contacts-header__cicle"></div>
+                    <a class="contacts-header__link"
+                        href="https://www.google.com.ua/maps/place/Admiral's'kyi+Ave,+3,+Odesa,+Odes'ka+oblast,+65000/@46.436045,30.7379414,17z/data=!3m1!4b1!4m5!3m4!1s0x40c63396894457b7:0x7f6c5236cbcb70c8!8m2!3d46.436045!4d30.7401301?hl=en&authuser=0">
+                        Одеса, Адміральський пр., 3
+                    </a>
+                </li>
+                <li hidden>
+                    <div class="contacts-header__cicle"></div>
+                    <a class="contacts-header__link"
+                        href="https://www.google.com.ua/maps/place/Admiral's'kyi+Ave,+3,+Odesa,+Odes'ka+oblast,+65000/@46.436045,30.7379414,17z/data=!3m1!4b1!4m5!3m4!1s0x40c63396894457b7:0x7f6c5236cbcb70c8!8m2!3d46.436045!4d30.7401301?hl=en&authuser=0">
+                        Подивитися на мапі
+                    </a>
+                </li>
+                <li class="contacts-header__item">
+                    <div class="contacts-header__cicle"></div>
+                    <a class="contacts-header__link" href="tel:+380503901591">
+                        +38 (050) 390 15 91
+                    </a>
+                </li>
+                <li class="contacts-header__item">
+                    <div class="contacts-header__cicle"></div>
+                    <a class="contacts-header__link header-hero__logo-fb" href="https://www.facebook.com/">
+                        <img src="images/logo-fb-gray.svg" alt="FB page">
+                    </a>
+                </li>
+                <li hidden>
+                    <div class="contacts-header__cicle"></div>
+                    <a class="contacts-header__link" href="mailto:contact@hlegals.net">
+                        contact@hlegals.net
+                    </a>
+                </li>
+            </ul>
+        </address>
+        <nav class="header__nav">
+            <button aria-label="відкрити меню навігації" class="menu-open-nav">
+                <span class="menu-open-nav-decor"></span>
+                <span class="menu-open-nav-decor"></span>
+                <span class="menu-open-nav-decor"></span>
+            </button>
+            <ul class="header__list">
+                <li class="header__list-item">
+                    <a href="about.html">про нас</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="services.html">послуги</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="team.html">команда</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="publications.html">публікації</a>
+                </li>
+                <li class="header__list-item">
+                    <a href="contact.html">контакти</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- END HEADER -->
+    <!-- START MAIN -->
+    <main>
+        <section class="contact container">
+            <h2 hidden>
+                Наші контакти
+            </h2>
+            <address>
+                <ul class="contacts__list-contact">
+                    <li class="contacts__item-contact">
+                        <a class="contacts__link-contact"
+                            href="https://www.google.com.ua/maps/place/Admiral's'kyi+Ave,+3,+Odesa,+Odes'ka+oblast,+65000/@46.436045,30.7379414,17z/data=!3m1!4b1!4m5!3m4!1s0x40c63396894457b7:0x7f6c5236cbcb70c8!8m2!3d46.436045!4d30.7401301?hl=en&authuser=0">
+                            Одеса, Адміральський пр., 3
+                        </a>
+                    </li>
+                    <li class="contacts__item-contact">
+                        <a class="contacts__link-contact" href="tel:+380503901591">
+                            +38 (050) 390 15 91
+                        </a>
+                    </li>
+                    <li class="contacts__item-contact">
+                        <a class="contacts__link-contact" href="mailto:contact@hlegals.net">
+                            contact@hlegals.net
+                        </a>
+                    </li>
+                    <li class="contacts__item-contact">
+                        <a class="contacts__link-contact header-hero__logo-fb" href="https://www.facebook.com/">
+                            Наша сторінка в фейсбуці
+                        </a>
+                    </li>
+                </ul>
+            </address>
+
+            <form class="form-contact" action="#" autocomplete="off" name="user" id="user" target="_blank">
+                <fieldset>
+                    <legend class="form-contact__heading-main">Ми хотіли б Вам допомогти</legend>
+                    <ul class="form-contact__listing">
+                        <li class="form-contact__item">
+                            <input type="text" name="name" id="name" placeholder="Iм’я" required>
+                        </li>
+                        <li class="form-contact__item">
+                            <textarea name="masage" id="masage" placeholder="Повідомлення" required cols="30"
+                                rows="10"></textarea>
+                        </li>
+                    </ul>
+                </fieldset>
+                <fieldset>
+                    <legend class="form-contact__heading-mainor">Як вам відповісти?</legend>
+                    <ul class="form-contact__listing">
+                        <li class="form-contact__item">
+                            <input type="tel" name="phone" id="phone" placeholder="Номер телефона" required>
+                        </li>
+                        <li class="form-contact__item">
+                            <input type="email" name="email" id="email" placeholder="Чи email" required>
+                        </li>
+                    </ul>
+                </fieldset>
+                <input class="button-more-posts" type="submit" value="Надіслати запит" name="user">
+            </form>
+
+        </section>
+        <iframe class="map"
+            src="https://maps.google.com/maps?hl=uk&amp;q=Одеса,Адміральськийпр.,3&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+        </iframe>
+    </main>
+    <!-- END MAIN -->
+
+    <!-- START FOOTER -->
+    <footer class="footer-only footer-contact">
+        <div class=" container footer">
+            <address class="contacts">
+                <ul class="contacts__list-footer">
+                    <li class="contacts__item-footer">
+                        <div hidden class="contacts__cicle-footer"></div>
+                        <a class="contacts__link-footer"
+                            href="https://www.google.com.ua/maps/place/Admiral's'kyi+Ave,+3,+Odesa,+Odes'ka+oblast,+65000/@46.436045,30.7379414,17z/data=!3m1!4b1!4m5!3m4!1s0x40c63396894457b7:0x7f6c5236cbcb70c8!8m2!3d46.436045!4d30.7401301?hl=en&authuser=0">
+                            Одеса, Адміральський пр., 3
+                        </a>
+                    </li>
+                    <li class="contacts__item-footer">
+                        <div class="contacts__cicle-footer"></div>
+                        <a class="contacts__link-footer"
+                            href="https://www.google.com.ua/maps/place/Admiral's'kyi+Ave,+3,+Odesa,+Odes'ka+oblast,+65000/@46.436045,30.7379414,17z/data=!3m1!4b1!4m5!3m4!1s0x40c63396894457b7:0x7f6c5236cbcb70c8!8m2!3d46.436045!4d30.7401301?hl=en&authuser=0">
+                            Подивитися на мапі
+                        </a>
+                    </li>
+                    <li class="contacts__item-footer">
+                        <div hidden class="contacts__cicle-footer"></div>
+                        <a class="contacts__link-footer header-hero__logo-fb" href="https://www.facebook.com/">
+                            <img src="images/logo-fb-blue.svg" alt="FB page">
+                        </a>
+                    </li>
+                    <li class="contacts__item-footer">
+                        <div class="contacts__cicle-footer"></div>
+                        <a class="contacts__link-footer" href="tel:+380503901591">
+                            +38 (050) 390 15 91
+                        </a>
+                    </li>
+                    <li class="contacts__item-footer">
+                        <div class="contacts__cicle-footer"></div>
+                        <a class="contacts__link-footer" href="mailto:contact@hlegals.net">
+                            contact@hlegals.net
+                        </a>
+                    </li>
+                </ul>
+            </address>
+            <div class="copyright">
+                © 2021 ТОВ Юридична компанія «HLEGALS»
+            </div>
+        </div>
+    </footer>
+    <!-- END FOOTER -->
+</body>
+
+</html>

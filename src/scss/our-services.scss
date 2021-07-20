@@ -1,0 +1,138 @@
+.our-services {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 80px;
+  & {
+    @media (max-width: 768px) {
+      margin-top: 45px;
+    }
+  }
+}
+.our-services__link {
+  @include font-h3caps;
+  color: var(--color-text);
+  //text-transform: uppercase;
+}
+.our-services__heading-description {
+  @include font-h1;
+  background: var(--gradient-red-text);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  @media (max-width: 768px) {
+    @include font-h2;
+    width: 335px;
+    font-weight: 700;
+  }
+}
+.our-services__list {
+  margin-top: 68px;
+  margin-right: auto;
+  margin-bottom: 80px;
+  margin-left: auto;
+  & {
+    @media (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+}
+.our-services__card {
+  display: grid;
+  grid-column-gap: 40px;
+  grid-row-gap: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  & {
+    @media (max-width: 768px) {
+      grid-row-gap: 40px;
+    }
+  }
+}
+.our-services__item {
+  width: 413px;
+  & {
+    @media (max-width: 768px) {
+      display: inline-flex;
+    }
+  }
+}
+.our-services__link {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  height: 100%;
+}
+.our-services__heading {
+  @include font-h3;
+  grid-area: head;
+  margin-top: 22px;
+  color: var(--color-active-regular);
+  text-transform: none;
+  @media (max-width: 768px) {
+    width: 260px;
+  }
+}
+.our-services__description {
+  @include font-articl;
+  grid-area: description;
+  width: inherit;
+  margin-top: 15px;
+  color: var(--color-text-for-dark);
+  text-transform: none;
+}
+.our-services__image {
+  grid-area: img;
+  width: auto;
+  height: 92px;
+}
+
+@media (max-width: 1440px) {
+  .our-services__item {
+    width: 100%;
+  }
+}
+@media (max-width: 1024px) {
+  .our-services__card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .our-services__item {
+    width: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .our-services__card {
+    display: flex;
+    flex-direction: column;
+  }
+  .our-services__item {
+    display: flex;
+    width: 335px;
+  }
+  .our-services__image {
+    display: inline;
+    width: 64px;
+    height: auto;
+  }
+  .our-services__heading {
+    @include font-h4;
+    display: flex;
+    width: 260px;
+    margin-top: 0;
+    font-weight: 500;
+  }
+  .our-services__link,
+  .our-services__item {
+    display: grid;
+    grid-template-areas:
+      'img head'
+      'description description';
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 10px;
+  }
+  .our-services__description {
+    @include font-ul;
+    margin-top: 0;
+  }
+}

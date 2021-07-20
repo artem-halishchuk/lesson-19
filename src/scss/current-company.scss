@@ -1,0 +1,99 @@
+.current-company {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  .current-company__header {
+    @include font-h3caps;
+    color: var(--color-main-900);
+  }
+  .current-company__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100%;
+    margin-top: 30px;
+    justify-items: end;
+  }
+  .current-company__item {
+    width: 100%;
+    height: calc(360px / 3);
+    .current-company__link {
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: transparent;
+    }
+  }
+  .current-company__item {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64% auto, 100%;
+  }
+  .current-company__item:nth-child(1) {
+    background-color: #1c4280;
+    background-image: url('../images/current-company/hillel.svg');
+  }
+  .current-company__item:nth-child(2) {
+    background-color: #143646;
+    background-image: url('../images/current-company/wanna-biz.png');
+  }
+  .current-company__item:nth-child(3) {
+    background-color: #f48b30;
+    background-image: url('../images/current-company/tapgerine.svg');
+  }
+  .current-company__item:nth-child(4) {
+    background-color: #9e4dc3;
+    background-image: url('../images/current-company/3d-look.png');
+  }
+  .current-company__item:nth-child(5) {
+    background-color: #fd9339;
+    background-image: url('../images/current-company/arangear.svg');
+  }
+  .current-company__item:nth-child(6) {
+    background-color: #e2e2e4;
+    background-image: url('../images/current-company/adtelligent.svg');
+  }
+  .current-company__item:nth-child(7) {
+    background-color: #c71c36;
+    background-image: url('../images/current-company/clickky.svg');
+    background-size: 45% auto, 100%;
+  }
+  .current-company__item:nth-child(8) {
+    background-color: #dcf3f9;
+    background-image: url('../images/current-company/ecolease.png');
+    background-size: 39% auto, 100%;
+  }
+  .current-company__item:nth-child(9) {
+    background-color: #eaeaea;
+    background-image: url('../images/current-company/infra-tek.png');
+    background-size: 55% auto, 100%;
+  }
+  .current-company__item:nth-child(10) {
+    background-color: #282240;
+    background-image: url('../images/current-company/city-park.svg');
+  }
+  .current-company__item:nth-child(11) {
+    background-color: #1d4568;
+    background-image: url('../images/current-company/art-print.png');
+  }
+  .current-company__item:nth-child(12) {
+    background-color: #000;
+    background-image: url('../images/current-company/ultimate-card.png');
+    background-size: 39% auto, 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .current-company {
+    .current-company__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 1fr);
+      margin-top: 30px;
+    }
+    .current-company__item {
+      height: 90px;
+    }
+  }
+}

@@ -1,0 +1,110 @@
+.header-team {
+  .header__nav {
+    .header__list {
+      .header__list-item:nth-child(3) {
+        border-bottom-color: var(--color-accent);
+        color: var(--color-accent);
+        &:hover {
+          color: var(--color-accent);
+        }
+      }
+    }
+  }
+}
+.all-team {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 85px;
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 30px;
+  }
+}
+.all-team__heading {
+  @include heading;
+  width: 65%;
+  @media (max-width: 1024px) {
+    @include font-h2;
+    width: 82%;
+    font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    @include font-h2;
+    width: 100%;
+    font-weight: 700;
+  }
+}
+.all-team__listing {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  gap: 40px;
+  @media (max-width: 1024px) {
+    margin-top: 40px;
+  }
+  @media (max-width: 768px) {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+}
+.all-team__item {
+  display: grid;
+  grid-template-areas:
+    'img img'
+    'description link';
+  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
+  align-items: end;
+  width: calc((100% / 3) - ((2 * 40px) / 3));
+  overflow: hidden;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  @media (max-width: 1024px) {
+    width: calc((100% / 2) - ((1 * 40px) / 2));
+  }
+  @media (max-width: 768px) {
+    grid-template-areas:
+      'img description'
+      'img link';
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    gap: 20px;
+  }
+  .all-team__img {
+    grid-area: img;
+    align-self: start;
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+  }
+  .all-team__description {
+    grid-area: description;
+    margin-top: 20px;
+    .all-team__name {
+      @include font-h4 font-weight: 500;
+      color: var(--color-main-900);
+    }
+    .all-team__position {
+      @include font-ul;
+      margin-top: 5px;
+      color: var(--color-text);
+    }
+    @media (max-width: 768px) {
+      margin-bottom: -10px;
+    }
+  }
+  .all-team__link {
+    display: block;
+    grid-area: link;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--color-content-background);
+    background-image: url('../images/all-team/Vector.svg');
+    background-repeat: no-repeat;
+    background-position: 59% 50%;
+  }
+}

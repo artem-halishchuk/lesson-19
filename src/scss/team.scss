@@ -1,0 +1,109 @@
+.team__content {
+  display: grid;
+  grid-template-areas: 'team-photo team-description';
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr;
+  margin-top: 50px;
+  border-radius: var(--border-radius);
+  background-color: var(--color-content-background);
+}
+.team__photo {
+  grid-area: team-photo;
+  width: auto;
+  height: 500px;
+  border-radius: var(--border-radius) 0 0 var(--border-radius);
+}
+.team__mobil-content {
+  display: none;
+}
+.team__description {
+  grid-area: team-description;
+  padding: 40px;
+}
+.team__link {
+  @include font-h3caps;
+  color: var(--color-active-regular);
+}
+.team__link:hover {
+  color: var(--color-active-hover);
+}
+.team__link:active {
+  color: var(--color-active-push);
+}
+.team__heading {
+  @include font-h1;
+  grid-area: team-heading;
+  padding-top: 3px;
+  background: var(--gradient-red-text);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.team__name {
+  @include font-h4;
+  grid-area: team-name;
+  padding-top: 26px;
+  color: var(--color-text);
+}
+.team__position {
+  @include font-link;
+  grid-area: team-position;
+  padding-top: 5px;
+  color: var(--color-text);
+}
+
+@include listing;
+
+@media (max-width: 1440px) {
+  .team__photo {
+    height: 470px;
+  }
+  .team__heading {
+    @include font-h2;
+    font-weight: 700;
+  }
+}
+@media (max-width: 1024px) {
+  .team__photo {
+    height: 390px;
+  }
+  .team__heading {
+    @include font-h3;
+    font-weight: 700;
+  }
+  .team__description {
+    padding-top: 20px;
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .team__photo,
+  .team__description > .team__name,
+  .team__description > .team__position {
+    display: none;
+  }
+  .team__mobil-content {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    .team__photo-mobile {
+      width: auto;
+      height: 60px;
+      border-radius: 50%;
+    }
+    .team__mobil-name {
+      margin-left: 10px;
+    }
+    .team__name {
+      padding-top: 0;
+      padding-bottom: 5px;
+    }
+  }
+  .team__content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .team__description {
+    padding: 0;
+  }
+}
